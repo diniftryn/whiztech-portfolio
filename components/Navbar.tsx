@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -21,10 +21,10 @@ export default function Navbar() {
         </button>
 
         <ul className="flex-center max-md:hidden flex flex-row justify-between border-black border">
-          <NavItem section="#about" text="about us" />
-          <NavItem section="#works" text="our works" />
-          <NavItem section="#services" text="services" />
-          <NavItem section="#contact" text="contact" />
+          <NavItem section="about" text="about us" />
+          <NavItem section="works" text="our works" />
+          <NavItem section="services" text="services" />
+          <NavItem section="contact" text="contact" />
         </ul>
       </div>
 
@@ -38,10 +38,10 @@ export default function Navbar() {
           >
             <AiOutlineClose />
           </button>
-          <NavItem section="#about" text="about us" />
-          <NavItem section="#works" text="our works" />
-          <NavItem section="#services" text="services" />
-          <NavItem section="#contact" text="contact" />
+          <NavItem section="about" text="about us" />
+          <NavItem section="works" text="our works" />
+          <NavItem section="services" text="services" />
+          <NavItem section="contact" text="contact" />
         </ul>
       </div>
     </nav>
@@ -50,8 +50,10 @@ export default function Navbar() {
 
 function NavItem({ section, text }: { section: string; text: string }) {
   return (
-    <Link className="md:flex-1 md:border border-black bg-white py-2" href={`${section}`}>
-      <li>{text}</li>
+    <Link to={`${section}`} smooth duration={500} offset={-85} className="md:flex-1 md:border border-black bg-white py-2">
+      <li>
+        <button className="w-full">{text}</button>
+      </li>
     </Link>
   );
 }
