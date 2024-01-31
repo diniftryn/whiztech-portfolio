@@ -29,12 +29,12 @@ export default function Navbar() {
       </div>
 
       <div className="bg-white bg-opacity-80 md:hidden">
-        <ul className={`${isMenuOpen ? "p-2" : "hidden"}`}>
+        <ul className={`${isMenuOpen ? "pb-7" : "hidden"}`}>
           <button
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="flex pt-3 px-3"
+            className="flex pt-5 px-5"
           >
             <AiOutlineClose />
           </button>
