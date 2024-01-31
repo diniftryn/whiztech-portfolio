@@ -15,9 +15,9 @@ export default function Navbar() {
           onClick={() => {
             setMenuOpen(true);
           }}
-          className={`${isMenuOpen ? "hidden" : "flex px-10"}`}
+          className={`${isMenuOpen ? "hidden" : "flex"}`}
         >
-          <Image src="/hamburger-menu.svg" width={30} height={30} alt="Hamburger menu" className="block mt-5 md:hidden border border-blue-100 bg-slate-400 rounded-lg" />
+          <Image src="/hamburger-menu.svg" width={30} height={30} alt="Hamburger menu" className="block mt-5 md:hidden border border-blue-100 bg-slate-400" />
         </button>
 
         <ul className="flex-center max-md:hidden flex flex-row justify-between border-black border">
@@ -34,7 +34,7 @@ export default function Navbar() {
             onClick={() => {
               setMenuOpen(false);
             }}
-            className="flex px-20"
+            className="flex pt-3 px-3"
           >
             <AiOutlineClose />
           </button>
