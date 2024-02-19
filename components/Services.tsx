@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 import RoundHeader from "./RoundHeader";
-import Image from "next/image";
 
 export default function Services() {
   const content = [
@@ -16,11 +17,13 @@ export default function Services() {
 
   return (
     <section id="services" className="w-full bg-rose-100 py-20 border border-t-black flex flex-col justify-center items-center">
-      <div className="pb-20 flex justify-center">
-        <RoundHeader text="SPECIALITIES" />
-      </div>
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }}>
+        <div className="pb-20 flex justify-center">
+          <RoundHeader text="SPECIALITIES" />
+        </div>
 
-      <div className="md:flex md:justify-between sm:justify-center px-5 md:px-10 max-w-[1500px]">{content && content.map(content => <Specialities key={content.header} header={content.header} description={content.description} />)}</div>
+        <div className="md:flex md:justify-between sm:justify-center px-5 md:px-10 max-w-[1500px]">{content && content.map(content => <Specialities key={content.header} header={content.header} description={content.description} />)}</div>
+      </motion.div>
     </section>
   );
 }
