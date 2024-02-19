@@ -31,7 +31,7 @@ export default function Works() {
   };
 
   return (
-    <section id="works" style={backgroundImageStyle} className="w-full min-h-[500px] border border-t-black flex flex-col py-10">
+    <section id="works" style={backgroundImageStyle} className="w-full min-h-[500px] border-t border-t-black flex flex-col py-10">
       <div className="mt-10 pb-10">
         <RoundHeader text="portfolio" />
       </div>
