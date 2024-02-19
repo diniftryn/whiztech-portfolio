@@ -3,7 +3,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import ScrollBar from "@/components/ScrollBar";
+import ScrollBar from "@/components/LinearText";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
 
