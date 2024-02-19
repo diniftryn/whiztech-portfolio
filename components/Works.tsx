@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
 import RoundHeader from "./RoundHeader";
 import Link from "next/link";
-import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const works = [
@@ -31,12 +32,14 @@ export default function Works() {
   };
 
   return (
-    <section id="works" style={backgroundImageStyle} className="w-full min-h-[500px] border-t border-t-black flex flex-col py-10">
-      <div className="mt-10 pb-10">
-        <RoundHeader text="portfolio" />
-      </div>
+    <section id="works" style={backgroundImageStyle} className="w-full min-h-[90vh] border-t border-t-black py-10">
+      <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.5, ease: "easeInOut" }}>
+        <div className="mt-10 pb-10 flex justify-center items-center">
+          <RoundHeader text="portfolio" />
+        </div>
 
-      <div className="pt-10 md:flex justify-center px-5 md:px-10 max-w-[1500px]">{works && works.map(work => <WorkItem key={work.title} work={work} />)}</div>
+        <div className="pt-10 md:flex justify-center px-5 md:px-10 max-w-[1500px]">{works && works.map(work => <WorkItem key={work.title} work={work} />)}</div>
+      </motion.div>
     </section>
   );
 }

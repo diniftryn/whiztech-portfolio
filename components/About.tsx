@@ -1,3 +1,4 @@
+import LinearText from "./LinearText";
 import RoundHeader from "./RoundHeader";
 import Image from "next/image";
 

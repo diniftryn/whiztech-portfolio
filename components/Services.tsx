@@ -16,8 +16,8 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="w-full bg-rose-100 py-20 border-t border-t-black flex flex-col justify-center items-center">
-      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }}>
+    <section id="services" className="w-full min-h-[90vh] bg-rose-100 py-20 border-t border-t-black flex flex-col justify-center items-center">
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, ease: "easeInOut" }}>
         <div className="pb-20 flex justify-center">
           <RoundHeader text="SPECIALITIES" />
         </div>
